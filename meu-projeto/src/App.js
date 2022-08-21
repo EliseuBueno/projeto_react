@@ -3,6 +3,7 @@ import './App.css';
 import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import List from './components/List';
 
 function App() {
   const name = 'Eliseu'
@@ -25,6 +26,7 @@ function App() {
         <img src={url} alt="Minha Imagem"/>
         <HelloWorld></HelloWorld>
         <Pessoa nome={name} idade={idade} profissao={profissao} foto={url}/>
+        <List/>
       </header>
     </div>
   );

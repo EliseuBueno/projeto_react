@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function Item({marca, lancamento}){
+function Item({marca, ano_lancamento}){
     return(
         <>
             <p>Marca do Veículo:</p>

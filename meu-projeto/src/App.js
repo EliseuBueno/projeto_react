@@ -30,7 +30,7 @@ function App() {
         <Pessoa nome={name} idade={idade} profissao={profissao} foto={url}/>
         <List/>
         <Evento numero="1"/>
-        <Evento numero="2"/>
+        {/* <Evento numero="2"/> */}
         <Form />
       </header>
     </div>

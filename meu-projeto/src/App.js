@@ -6,6 +6,7 @@ import Pessoa from './components/Pessoa';
 import List from './components/List';
 import Evento from './components/Evento';
 import Form from './components/Form';
+import Condicional from './components/Condicional';
 
 function App() {
   const name = 'Eliseu'
@@ -20,6 +21,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Renderização Condicional</h1>
+        <Condicional />
+        <br></br>
         <h1>Alterando o JSX</h1>
         <SayMyName nome={name}/>
         <p>Olá, {newName}</p>

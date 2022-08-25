@@ -7,6 +7,7 @@ import List from './components/List';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista';
 
 function App() {
   const name = 'Eliseu'
@@ -14,6 +15,7 @@ function App() {
   const profissao = 'Programador'
   const newName = name.toUpperCase()
   const url = 'https://via.placeholder.com/150'
+  const meusItens = ['React', 'Vue', 'Angular']
   function sum(a, b){
     return a + b
   }
@@ -21,6 +23,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>Renderização de Listas</h1>
+      <OutraLista itens={meusItens}/>
+      <OutraLista itens={[]}/>
+      <br></br>
         <h1>Renderização Condicional</h1>
         <Condicional />
         <br></br>

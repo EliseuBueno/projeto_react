@@ -8,6 +8,16 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
+import { useState } from 'react';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
+
 
 function App() {
   const name = 'Eliseu'
@@ -16,6 +26,7 @@ function App() {
   const newName = name.toUpperCase()
   const url = 'https://via.placeholder.com/150'
   const meusItens = ['React', 'Vue', 'Angular']
+  const [nome, setNome] = useState()
   function sum(a, b){
     return a + b
   }
@@ -23,6 +34,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Router>
+        <NavBar />
+          <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/empresa' element={<Empresa />}/>
+          <Route path='/contato' element={<Contato />}/>
+        </Routes>
+        <Footer />
+      </Router>
+      <br></br>
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome}/>
+      {nome}
+      <Saudacao nome={nome}/>
+      <br></br>
       <h1>Renderização de Listas</h1>
       <OutraLista itens={meusItens}/>
       <OutraLista itens={[]}/>
